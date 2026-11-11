@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana spēle</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .skana {
+            background-color: lightblue;
+            border: 2px solid blue;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 360px;
+            text-align: center;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mana spēle</h1>
+
+    <div class="skana">
+        <h2>Punkta iegūšana</h2>
+        <p>
+            Šī skaņa atskaņojas, kad spēlētājs
+            iegūst punktu spēlē.
+        </p>
+
+        <audio controls src="klikskis.wav"></audio>
+    </div>
+
+    <div class="skana">
+        <h2>Līmeņa pabeigšana</h2>
+        <p>
+            Šī skaņa atskaņojas, kad spēlētājs
+            veiksmīgi pabeidz spēles līmeni.
+        </p>
+
+        <audio controls src="otra-skana.wav"></audio>
+    </div>
+
+</body>
+</html>

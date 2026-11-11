@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robota punktu spēle</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e8f4ff;
+            color: #172b4d;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #145da0;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .noteikumi {
+            background-color: #ffffff;
+            color: #172b4d;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 700px;
+        }
+
+        .laukums {
+            padding: 20px;
+            border: 3px solid #145da0;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            background-color: #d5ebff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background-color: #145da0;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0b3d70;
+        }
+
+        audio {
+            max-width: 100%;
+        }
+
+        #punkti {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Robota punktu spēle</h1>
+
+    <p>
+        Spēles mērķis ir savākt pēc iespējas vairāk punktu,
+        nospiežot pogu un palīdzot robotam.
+    </p>
+
+    <section class="noteikumi">
+        <h2>Spēles noteikumi</h2>
+
+        <p>
+            Lai spēlētu, nospied pogu "Iegūt punktu".
+            Katrs pogas klikšķis palielina punktu skaitu par vienu.
+        </p>
+
+        <p>
+            Skaņas atskaņotājā var ieslēgt un apturēt spēles skaņu.
+            Skaņa palīdz padarīt spēli interesantāku.
+        </p>
+
+        <p>
+            Nākotnē spēlei plānots pievienot jaunus līmeņus
+            un papildu uzdevumus.
+        </p>
+    </section>
+
+    <div class="laukums">
+
+        <h2>Mans robots</h2>
+
+        <img
+            src="atteli/varonis.png"
+            alt="Mans paša zīmēts robots ar krāsainu korpusu"
+            width="128"
+        >
+
+        <p>Robots ir gatavs vākt punktus!</p>
+
+        <h3>Skaņas atskaņotājs</h3>
+
+        <p>
+            Nospied atskaņošanas pogu, lai noklausītos manu spēles skaņu.
+        </p>
+
+        <audio controls src="skanas/skaņa.wav">
+            Tavs pārlūks neatbalsta audio atskaņošanu.
+        </audio>
+
+        <h3 id="punkti">Punkti: 0</h3>
+
+        <button onclick="pievienotPunktu()">
+            Iegūt punktu
+        </button>
+
+    </div>
+
+    <script>
+        let punktuSkaits = 0;
+
+        function pievienotPunktu() {
+            punktuSkaits++;
+
+            document.getElementById("punkti").textContent =
+                "Punkti: " + punktuSkaits;
+        }
+    </script>
+
+</body>
+</html>
